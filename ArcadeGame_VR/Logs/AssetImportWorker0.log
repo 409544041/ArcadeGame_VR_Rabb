@@ -166,3 +166,397 @@ Received Import Request.
   path: Assets/UniversalRenderPipelineGlobalSettings.asset
   artifactKey: Guid(18dc0cd2c080841dea60987a38ce93fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/UniversalRenderPipelineGlobalSettings.asset using Guid(18dc0cd2c080841dea60987a38ce93fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2eecc253734895facb66926253515a97') in 0.071181 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 877.233548 seconds.
+  path: Assets/Rabb
+  artifactKey: Guid(4570136e1204a294c8bf6f5a3f687fe0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rabb using Guid(4570136e1204a294c8bf6f5a3f687fe0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e7a7a502e4b8c8e956fecad7192fab0') in 0.009351 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.328595 seconds.
+  path: Assets/Rabb/Scenes
+  artifactKey: Guid(8b126f93f28b0ea4d82d4b2462ecb7ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rabb/Scenes using Guid(8b126f93f28b0ea4d82d4b2462ecb7ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fda3d801b419eaa9049d61281bfc4d75') in 0.007804 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 19.160037 seconds.
+  path: Assets/Rabb/Scenes/ArcadeVR.unity
+  artifactKey: Guid(34e06d32b16a7314e81086c4a31a9500) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rabb/Scenes/ArcadeVR.unity using Guid(34e06d32b16a7314e81086c4a31a9500) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e00dadaff6f02f1df8581e3b9670225d') in 0.007283 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 12.395249 seconds.
+  path: Assets/Rabb/Scenes/Arcade2D.unity
+  artifactKey: Guid(6b79195ce2f7d474fbaedbbde35eef43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rabb/Scenes/Arcade2D.unity using Guid(6b79195ce2f7d474fbaedbbde35eef43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f772f1ec61c504fe8586fc412a97f57') in 0.007258 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 63.414874 seconds.
+  path: Assets/Rabb/Scenes/Arcade2D.unity
+  artifactKey: Guid(6b79195ce2f7d474fbaedbbde35eef43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rabb/Scenes/Arcade2D.unity using Guid(6b79195ce2f7d474fbaedbbde35eef43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e77d7d96fd07cab36c1f25094d898131') in 0.003724 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 52.216071 seconds.
+  path: Assets/Rabb/Scenes/ArcadeVR.unity
+  artifactKey: Guid(34e06d32b16a7314e81086c4a31a9500) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rabb/Scenes/ArcadeVR.unity using Guid(34e06d32b16a7314e81086c4a31a9500) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9dadd443309824c88bb1161235d74d45') in 0.004464 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 58.242190 seconds.
+  path: Assets/Arcade/Prefabs/AirHockey.prefab
+  artifactKey: Guid(e9afaa9ffa15eb84da90a978eff5b768) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arcade/Prefabs/AirHockey.prefab using Guid(e9afaa9ffa15eb84da90a978eff5b768) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8495bb07bd9bceb954fc5ddc451e1e14') in 0.500001 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000049 seconds.
+  path: Assets/Arcade/Prefabs/NeonSign.prefab
+  artifactKey: Guid(6581c028f5beec04b833839ae09e653a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arcade/Prefabs/NeonSign.prefab using Guid(6581c028f5beec04b833839ae09e653a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '070755ed7eb240767a6306b3714e8475') in 0.027501 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/Arcade/Prefabs/ArcadeMachine03.prefab
+  artifactKey: Guid(9437dac6606e73c43b196fc45b0a1df3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arcade/Prefabs/ArcadeMachine03.prefab using Guid(9437dac6606e73c43b196fc45b0a1df3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0eda263ccd473f78aa5306fbe30c8352') in 0.048422 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000067 seconds.
+  path: Assets/Arcade/Prefabs/TrashCan.prefab
+  artifactKey: Guid(45cb033a662b39d45a4bdf2166ceddb1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arcade/Prefabs/TrashCan.prefab using Guid(45cb033a662b39d45a4bdf2166ceddb1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ebd71550dbf71c40f0a6447fe3c967cd') in 0.028706 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Arcade/Prefabs/Door.prefab
+  artifactKey: Guid(58c753a95fadf8943a7789129929b788) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arcade/Prefabs/Door.prefab using Guid(58c753a95fadf8943a7789129929b788) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb8c26df3acda78653fa2397e6aa39e8') in 0.030609 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Arcade/Prefabs/FireExit_Sign.prefab
+  artifactKey: Guid(c5e70fbb16bc2054dbf8830a2f8ec317) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arcade/Prefabs/FireExit_Sign.prefab using Guid(c5e70fbb16bc2054dbf8830a2f8ec317) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b62d3304b8c9ac809651d7ce31e37f82') in 0.063470 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/Arcade/Prefabs/Dust.prefab
+  artifactKey: Guid(09a3a9c63f0e59c46a118482e39e26de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arcade/Prefabs/Dust.prefab using Guid(09a3a9c63f0e59c46a118482e39e26de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f78f3232d1ef0d45f1f3d054c08fbce') in 0.092712 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 55.929832 seconds.
+  path: Assets/Arcade/Materials/AirHockey_texture.mat
+  artifactKey: Guid(d8c2e9e5c4685fb45ae7e6c8c49f3320) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arcade/Materials/AirHockey_texture.mat using Guid(d8c2e9e5c4685fb45ae7e6c8c49f3320) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a5c11e4f77df2c487c5bdecc110f287') in 0.072240 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000074 seconds.
+  path: Assets/Arcade/Materials/Plaster_texture.mat
+  artifactKey: Guid(3151040d5f78cac47ba3415c6c23b773) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arcade/Materials/Plaster_texture.mat using Guid(3151040d5f78cac47ba3415c6c23b773) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '222329807260f967f70552705523d85a') in 0.029762 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000068 seconds.
+  path: Assets/Arcade/Materials/ArcadeMachine_3_COL_ED.mat
+  artifactKey: Guid(dcccc655f0536b849956b0209aae225d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arcade/Materials/ArcadeMachine_3_COL_ED.mat using Guid(dcccc655f0536b849956b0209aae225d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae3a6c94a9985d7a83a1bfae67c1ec1b') in 0.030125 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Arcade/Materials/Carpet.mat
+  artifactKey: Guid(4a3364e6d499ef5478ad60c4c6d81905) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arcade/Materials/Carpet.mat using Guid(4a3364e6d499ef5478ad60c4c6d81905) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03147d1ddbfafc7149f2e5e7f427a772') in 0.023547 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Arcade/Materials/Roof_texture 1.mat
+  artifactKey: Guid(af0a8374f5eb38e46a1686e7fd29ab3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arcade/Materials/Roof_texture 1.mat using Guid(af0a8374f5eb38e46a1686e7fd29ab3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9dc159fe754e6fde6f09ebccbec560d3') in 0.027122 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Arcade/Materials/ArcadeMachine_2_COL_ED.mat
+  artifactKey: Guid(d4441aae872ccab45861d1a015399e2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arcade/Materials/ArcadeMachine_2_COL_ED.mat using Guid(d4441aae872ccab45861d1a015399e2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc104e09b92ea46ab78791543be0c3ca') in 0.031696 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Arcade/Materials/Bricks.mat
+  artifactKey: Guid(c0bd1cb06c5e55244b850965737483f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arcade/Materials/Bricks.mat using Guid(c0bd1cb06c5e55244b850965737483f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3db2577e064d9c4bcc7655cfa8e424c6') in 0.030555 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Arcade/Materials/Poster_NEX-N8R.mat
+  artifactKey: Guid(11041635d7805d0449ff29a0bafff390) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arcade/Materials/Poster_NEX-N8R.mat using Guid(11041635d7805d0449ff29a0bafff390) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c79b3c439b478f157322d164271b8b8') in 0.022302 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Arcade/Materials/Glass.mat
+  artifactKey: Guid(1a31310dbeff649449672a619b93bef2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arcade/Materials/Glass.mat using Guid(1a31310dbeff649449672a619b93bef2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f464ff71f33892fc846c2299d1e1ba7d') in 0.076600 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Arcade/Materials/Trashlid_Base_Color.mat
+  artifactKey: Guid(db4b7ad06f3511b458ca8e17270def2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arcade/Materials/Trashlid_Base_Color.mat using Guid(db4b7ad06f3511b458ca8e17270def2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26fe834a5b71771c978b0bf17a7a0a5d') in 0.026056 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/Arcade/Materials/LightRed.mat
+  artifactKey: Guid(f3dbc4d7c67da674c97892b4ec52829d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arcade/Materials/LightRed.mat using Guid(f3dbc4d7c67da674c97892b4ec52829d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '61815223c0722e5eb465968c4790bcea') in 0.023317 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Arcade/Materials/ThrashcCan_Body_texture.mat
+  artifactKey: Guid(82a7a66e3a73b7e4ea7594344e9e5d0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arcade/Materials/ThrashcCan_Body_texture.mat using Guid(82a7a66e3a73b7e4ea7594344e9e5d0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2147b6317d44b34b5fbca1cc757ed45d') in 0.020557 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Arcade/Materials/Stool_texture.mat
+  artifactKey: Guid(51fd06034fff75142a77e4ca744886de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arcade/Materials/Stool_texture.mat using Guid(51fd06034fff75142a77e4ca744886de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b56e1453c9ea1d9ef0be2df2da2e190') in 0.031159 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 142.583962 seconds.
+  path: Assets/Arcade/Prefabs/AirHockey.prefab
+  artifactKey: Guid(e9afaa9ffa15eb84da90a978eff5b768) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arcade/Prefabs/AirHockey.prefab using Guid(e9afaa9ffa15eb84da90a978eff5b768) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd596fd13d80e403e5cf90d3894a73e89') in 5.549616 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Arcade/Prefabs/Stool.prefab
+  artifactKey: Guid(641d00f976ebc584e985da823996d377) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arcade/Prefabs/Stool.prefab using Guid(641d00f976ebc584e985da823996d377) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a570b51787262695573a03a00ad773ec') in 0.032134 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000078 seconds.
+  path: Assets/Arcade/Prefabs/NeonSign.prefab
+  artifactKey: Guid(6581c028f5beec04b833839ae09e653a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arcade/Prefabs/NeonSign.prefab using Guid(6581c028f5beec04b833839ae09e653a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39e58d0a757836edba527451c59bddc6') in 2.300442 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 59.561086 seconds.
+  path: Assets/Arcade/Prefabs/ArcadeMachine01.prefab
+  artifactKey: Guid(6877d9c5e8281194aa92ec836dacdf85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arcade/Prefabs/ArcadeMachine01.prefab using Guid(6877d9c5e8281194aa92ec836dacdf85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '94ffab187dcc972fc0507271db87fc1e') in 0.038426 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000052 seconds.
+  path: Assets/Arcade/Prefabs/Stool.prefab
+  artifactKey: Guid(641d00f976ebc584e985da823996d377) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arcade/Prefabs/Stool.prefab using Guid(641d00f976ebc584e985da823996d377) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '729c810a7679aa9f083646e98a7fe3be') in 0.031198 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Arcade/Prefabs/Rack.prefab
+  artifactKey: Guid(c62d9055156d6494d8b80d014b690ebb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arcade/Prefabs/Rack.prefab using Guid(c62d9055156d6494d8b80d014b690ebb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '403ea610daa13374828358c77a3af51d') in 0.019088 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 46.103012 seconds.
+  path: Assets/Arcade/Prefabs/Door.prefab
+  artifactKey: Guid(58c753a95fadf8943a7789129929b788) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arcade/Prefabs/Door.prefab using Guid(58c753a95fadf8943a7789129929b788) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b843a89e14183d24152f4f610207dbb2') in 0.018401 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 828.379503 seconds.
+  path: Assets/Arcade/Prefabs/AirHockey.prefab
+  artifactKey: Guid(e9afaa9ffa15eb84da90a978eff5b768) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arcade/Prefabs/AirHockey.prefab using Guid(e9afaa9ffa15eb84da90a978eff5b768) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3e261d4af3eb913ce2d2162a3dba861') in 0.038080 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 223.707865 seconds.
+  path: Assets/Arcade/Materials/_Balls_COL.mat
+  artifactKey: Guid(17625628522d73141b5b6352432af960) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arcade/Materials/_Balls_COL.mat using Guid(17625628522d73141b5b6352432af960) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a56cae29506d03ac26df61f41eafcea') in 0.035357 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Arcade/Materials/Plaster_texture.mat
+  artifactKey: Guid(3151040d5f78cac47ba3415c6c23b773) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arcade/Materials/Plaster_texture.mat using Guid(3151040d5f78cac47ba3415c6c23b773) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cafd56a1318b49cb7086f18c491553e0') in 0.026967 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Arcade/Materials/DarkMetal.mat
+  artifactKey: Guid(4a92606d3e775c64ca7e41b94a101e19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arcade/Materials/DarkMetal.mat using Guid(4a92606d3e775c64ca7e41b94a101e19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3bac2c99e6e3018ae31e2235c89276b') in 0.023553 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Arcade/Materials/ArcadeMachine_3_COL_ED.mat
+  artifactKey: Guid(dcccc655f0536b849956b0209aae225d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arcade/Materials/ArcadeMachine_3_COL_ED.mat using Guid(dcccc655f0536b849956b0209aae225d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90ed23db43213ba08c7cc8ffcdd37616') in 0.030890 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Arcade/Materials/DarkWood.mat
+  artifactKey: Guid(aa2d5eff560f19a4783c7d3689d253f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arcade/Materials/DarkWood.mat using Guid(aa2d5eff560f19a4783c7d3689d253f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7da5694e896be1a7ebbb8ecf187b1869') in 0.021624 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Arcade/Materials/LightBlue.mat
+  artifactKey: Guid(cde8367d74c0f9a48af3320baac9e5d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arcade/Materials/LightBlue.mat using Guid(cde8367d74c0f9a48af3320baac9e5d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42c7d1ff676dd3f8ec0aac66773dc762') in 0.021719 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Arcade/Materials/ClawMachineMech_ClawMachineMech_COL.mat
+  artifactKey: Guid(109d6ad26dd73e14eaf991f916b8136f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arcade/Materials/ClawMachineMech_ClawMachineMech_COL.mat using Guid(109d6ad26dd73e14eaf991f916b8136f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2affef82d8577fd2bfcf5aa771a505ad') in 0.030143 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Arcade/Materials/BrownWood.mat
+  artifactKey: Guid(8e7ec21527c034644ab2b1b6c613a3fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arcade/Materials/BrownWood.mat using Guid(8e7ec21527c034644ab2b1b6c613a3fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af7991077438096ff071acf12441079f') in 0.020932 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Arcade/Materials/Exit.mat
+  artifactKey: Guid(5a4caad557b6b0742a073ad3dace6b39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arcade/Materials/Exit.mat using Guid(5a4caad557b6b0742a073ad3dace6b39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89ce3a78c1b090ae02a1265460f3dbce') in 0.021195 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Arcade/Materials/Poster_BaitedSpace.mat
+  artifactKey: Guid(45b1d285d06452444b2ddc72bddd4674) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arcade/Materials/Poster_BaitedSpace.mat using Guid(45b1d285d06452444b2ddc72bddd4674) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5973a192862e381ec9623ae58c8c5f38') in 0.022901 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Arcade/Materials/LampMetal.mat
+  artifactKey: Guid(dccab917722db6c419186ea5fbe6c81c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arcade/Materials/LampMetal.mat using Guid(dccab917722db6c419186ea5fbe6c81c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ff8966e83045085288a9711450469b3') in 0.021500 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/Arcade/Materials/Trashlid_Base_Color.mat
+  artifactKey: Guid(db4b7ad06f3511b458ca8e17270def2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arcade/Materials/Trashlid_Base_Color.mat using Guid(db4b7ad06f3511b458ca8e17270def2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '832649443247a5bb00425dced9ae9404') in 0.024554 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Arcade/Materials/LightRed.mat
+  artifactKey: Guid(f3dbc4d7c67da674c97892b4ec52829d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arcade/Materials/LightRed.mat using Guid(f3dbc4d7c67da674c97892b4ec52829d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '09659b8080b3b4fd850d92d6fb13d96e') in 0.023512 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Arcade/Materials/ClawMachine_COL_ED2.mat
+  artifactKey: Guid(2f54e05a6d0fd2242ab2521f27709ca9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arcade/Materials/ClawMachine_COL_ED2.mat using Guid(2f54e05a6d0fd2242ab2521f27709ca9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd58054e3164e7ecb64c988a518789cbd') in 0.026797 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Arcade/Materials/Stool_texture.mat
+  artifactKey: Guid(51fd06034fff75142a77e4ca744886de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arcade/Materials/Stool_texture.mat using Guid(51fd06034fff75142a77e4ca744886de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e0239c16532a68fb852c9c5f41bf410') in 0.029508 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.610349 seconds.
+  path: Assets/Arcade/Demo_Profiles/Post Profile.asset
+  artifactKey: Guid(fab9adcc78bed7941850d6481eaa1ff5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arcade/Demo_Profiles/Post Profile.asset using Guid(fab9adcc78bed7941850d6481eaa1ff5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f9609adbae734ef14871227e4d3b953') in 0.011365 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.603166 seconds.
+  path: Assets/Arcade/Objects/AirHockey_Puck.fbx
+  artifactKey: Guid(5253a2c13ef494545bfb58c0f7d75049) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arcade/Objects/AirHockey_Puck.fbx using Guid(5253a2c13ef494545bfb58c0f7d75049) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce475545545c388dd23b1763e27ea9e4') in 0.421484 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Arcade/Objects/ClawMachine.fbx
+  artifactKey: Guid(f840d6842a4e24a4ba6576a2e0c145bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arcade/Objects/ClawMachine.fbx using Guid(f840d6842a4e24a4ba6576a2e0c145bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8786ec69cf5e0416423c2ec805695200') in 0.106533 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Arcade/Objects/ArcadeMachine01.fbx
+  artifactKey: Guid(c907a4b3dae04064095844ad293fa1a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arcade/Objects/ArcadeMachine01.fbx using Guid(c907a4b3dae04064095844ad293fa1a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e4e4c5b449f705acd129e7267a435b7') in 0.061165 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Arcade/Objects/Lamp.fbx
+  artifactKey: Guid(e5d00e6f2a9dc4a43bd63b16637cf26e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arcade/Objects/Lamp.fbx using Guid(e5d00e6f2a9dc4a43bd63b16637cf26e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '307de3e3d58a7ba1e3bb8930a4124c3f') in 0.071606 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Arcade/Objects/ArcadeMachine03.fbx
+  artifactKey: Guid(370fb47717b0cfd4892040705d3d5068) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arcade/Objects/ArcadeMachine03.fbx using Guid(370fb47717b0cfd4892040705d3d5068) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22da2c5cc02a43257bfc4e05c7c5a058') in 0.060514 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Arcade/Objects/NeonSign.fbx
+  artifactKey: Guid(d03d3e5571a65824ba25d3a50496d942) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arcade/Objects/NeonSign.fbx using Guid(d03d3e5571a65824ba25d3a50496d942) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72cddb2f61a82ca857b41f47e98b5d78') in 0.146854 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.466382 seconds.
+  path: Assets/Arcade/Textures/AirHockey_AirHockey_NRM.png
+  artifactKey: Guid(2833f73ec6542564aa698290d8fc1357) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arcade/Textures/AirHockey_AirHockey_NRM.png using Guid(2833f73ec6542564aa698290d8fc1357) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7799e783fd7fe6f4ae5de72fd65872e') in 0.052254 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000078 seconds.
+  path: Assets/Arcade/Textures/Beam_Norma.png
+  artifactKey: Guid(08b72ae2e36eef144b11ef1bf0dd8a63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arcade/Textures/Beam_Norma.png using Guid(08b72ae2e36eef144b11ef1bf0dd8a63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea60239e437bc8802ece5d9c1c9b422b') in 0.026811 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Arcade/Textures/Bricks_texture.png
+  artifactKey: Guid(42981fde8aabeff47b6f8a8fa4189891) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arcade/Textures/Bricks_texture.png using Guid(42981fde8aabeff47b6f8a8fa4189891) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '36f1f7d4358fa14e29c58724c53d9e40') in 0.025829 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/Arcade/Textures/Stool_Normal.png
+  artifactKey: Guid(492e94241253ded4d93f74ea4dc3d26d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arcade/Textures/Stool_Normal.png using Guid(492e94241253ded4d93f74ea4dc3d26d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76cc38a6ff16b78e2416c56a5735ecae') in 0.029476 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Arcade/Textures/ClawMachine_COL_ED2.png
+  artifactKey: Guid(491374b298eb1084984de702e8d6823a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arcade/Textures/ClawMachine_COL_ED2.png using Guid(491374b298eb1084984de702e8d6823a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3acc2a907d45536e2bd77c130867ef5') in 0.026060 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000105 seconds.
+  path: Assets/Arcade/Textures/Carpet_Normal.png
+  artifactKey: Guid(70f5441cf2d5a8c4a92d9afdc8460656) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arcade/Textures/Carpet_Normal.png using Guid(70f5441cf2d5a8c4a92d9afdc8460656) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7c2fdc070044b688a61e2235b0bf872') in 0.027716 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Arcade/Textures/ArcadeMachine_1_COL_ED.png
+  artifactKey: Guid(2c8af09037ef87d49acbc326b49f8acf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arcade/Textures/ArcadeMachine_1_COL_ED.png using Guid(2c8af09037ef87d49acbc326b49f8acf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86827a4958b973c2c8a4c7b2e1fc6b3f') in 0.023503 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/Arcade/Textures/Stool_texture.png
+  artifactKey: Guid(01fa69ad031b191499a5a80f3af8623a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arcade/Textures/Stool_texture.png using Guid(01fa69ad031b191499a5a80f3af8623a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8daf103ad7581d7ee45e1867ce5544a8') in 0.022347 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Arcade/Textures/ArcadeMachine_3_ArcadeMachine_3_NRM.png
+  artifactKey: Guid(ded4ca18ae490d34a8bc3d3cc0e3eb97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arcade/Textures/ArcadeMachine_3_ArcadeMachine_3_NRM.png using Guid(ded4ca18ae490d34a8bc3d3cc0e3eb97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'caf9b7b66546d06505cc7cb6e34af569') in 0.026077 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
