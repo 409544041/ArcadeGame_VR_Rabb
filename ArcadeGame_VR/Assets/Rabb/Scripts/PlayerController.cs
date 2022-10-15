@@ -13,10 +13,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float cooldown = 1f;
     private float time = 0f;
+    private float timeSpaceDrift =10f;
     [SerializeField]
     private GameObject rocket;
     [SerializeField]
     private GameObject thrust;
+
     // Update is called once per frame
     void Update()
     {
@@ -25,10 +27,22 @@ public class PlayerController : MonoBehaviour
         {
             transform.position += transform.up * movementSpeed * Time.deltaTime;
             rocket.SetActive(true);
+   
+          //  script.ScreenWrap();
+          
         }
         if (Input.GetKeyUp(KeyCode.W))
         {
             rocket.SetActive(false);
+           /*
+                if (timeSpaceDrift > 0)
+                {
+                    transform.position += transform.up * spaceDrifting * Time.deltaTime;
+                    Debug.Log("Funkar" + timeSpaceDrift);
+                    timeSpaceDrift -= Time.deltaTime;
+                }
+           */
+                
         }
         //rotate left
         if (Input.GetKey(KeyCode.A))
@@ -64,5 +78,9 @@ public class PlayerController : MonoBehaviour
             Instantiate(laser, transform.TransformPoint(Vector3.up * 1), transform.rotation);
             time = cooldown;
         }
+    }
+    void moveForward()
+    { 
+    
     }
 }
