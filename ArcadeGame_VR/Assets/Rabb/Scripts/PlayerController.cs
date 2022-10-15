@@ -10,57 +10,59 @@ public class PlayerController : MonoBehaviour
     private float movementSpeed;
     [SerializeField]
     private GameObject laser;
-    //private GameObject clone;
     [SerializeField]
     private float cooldown = 1f;
     private float time = 0f;
-    //bool cloned = false;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
+    [SerializeField]
+    private GameObject rocket;
+    [SerializeField]
+    private GameObject thrust;
     // Update is called once per frame
     void Update()
     {
-        //transform.Translate(Vector3.forward * speed * Time.deltaTime);
-        if (time > 0f)
+        //Forward
+        if (Input.GetKey(KeyCode.W))
         {
-            time -= Time.deltaTime;
+            transform.position += transform.up * movementSpeed * Time.deltaTime;
+            rocket.SetActive(true);
         }
-        else if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKeyUp(KeyCode.W))
         {
-             Instantiate(laser, transform.TransformPoint(Vector3.up *1), transform.rotation);
-           
-            time = cooldown;
+            rocket.SetActive(false);
         }
-        /*
-        if (cloned == true)
-        {
-            clone.transform.position += clone.transform.up * movementSpeed * Time.deltaTime;
-        }
-        */
-        
+        //rotate left
         if (Input.GetKey(KeyCode.A))
         {
             transform.Rotate(Vector3.forward * rotationSpeed *Time.deltaTime);
         }
-
+        //rotate right
         if (Input.GetKey(KeyCode.D))
         {
             transform.Rotate(Vector3.back * rotationSpeed * Time.deltaTime);
+        }       
+        //Thrust
+        if(Input.GetKey(KeyCode.LeftShift))
+        {
+            movementSpeed = 6;
+            rocket.SetActive(false);
+            thrust.SetActive(true);
+        }
+        if (Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            movementSpeed = 3;
+            thrust.SetActive(false);
         }
 
-        if (Input.GetKey(KeyCode.W))
+        //Laser
+        if (time > 0f)
         {
-            transform.position += transform.up * movementSpeed * Time.deltaTime;
+            time -= Time.deltaTime;
+
         }
-        /*
-        Vector2 screenPosition = Camera.main.WorldToScreenPoint(transform.position);
-        if (screenPosition.y < (Screen.height - 10f))
-            Destroy(clone);
-        */
+        else if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Instantiate(laser, transform.TransformPoint(Vector3.up * 1), transform.rotation);
+            time = cooldown;
+        }
     }
-  
 }
