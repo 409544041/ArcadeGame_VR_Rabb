@@ -4,20 +4,19 @@ using UnityEngine;
 
 public class Asteroids : MonoBehaviour
 {
-    [SerializeField]
-    private float maxThrust = 5f;
+   // [SerializeField]
+  //  private float maxThrust = 5f;
     [SerializeField]
     private float asteroidThrust;
     [SerializeField]
     private float asteroidThrustSpin;
     [SerializeField]
     private float asteroidSpin;
+   // [SerializeField]
+   // private float maxSpin = 10f;
+   // [SerializeField]
+   // GameObject sprite;
     [SerializeField]
-    private float maxSpin = 10f;
-    [SerializeField]
-    private float asteroidStage;
-    [SerializeField]
-    GameObject sprite;
 
     // Start is called before the first frame update
     void Start()
@@ -32,26 +31,12 @@ public class Asteroids : MonoBehaviour
     {
 
 
-        switch (asteroidStage)
-        {
-            case 3:
 
+                transform.Rotate(0, 0, asteroidSpin *asteroidThrustSpin * Time.deltaTime, Space.Self); //rotate
+                transform.Translate(asteroidThrust * Time.deltaTime, 0, 0, Space.World);  //move 
+                transform.Translate(0, asteroidThrust * Time.deltaTime, 0, Space.World);
 
-                  transform.position += transform.up * asteroidThrust * Time.deltaTime;
-                 transform.position += transform.right * asteroidThrust * Time.deltaTime;
-                // transform.Rotate(Vector3.back *Time.deltaTime);
-                // sprite.transform.Rotate(Vector3.back * 100 * Time.deltaTime, Space.Self);
-                sprite.transform.Rotate(0, 0, asteroidSpin * asteroidThrustSpin * Time.deltaTime);
-                // Quaternion.Euler(0, 0, Random.Range(-0.0f, 359.0f));
-                break;
-        }
-
-       
+           
     }
-    /*
-    private void OnBecameInvisible()
-    {
-        Destroy(gameObject);
-    }
-    */
+        
 }

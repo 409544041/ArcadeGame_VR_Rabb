@@ -11,76 +11,108 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private GameObject laser;
     [SerializeField]
-    private float cooldown = 1f;
-    private float time = 0f;
-    private float timeSpaceDrift =10f;
-    [SerializeField]
     private GameObject rocket;
     [SerializeField]
     private GameObject thrust;
+    [SerializeField]
+    private SpriteRenderer spritePlayer;
 
-    // Update is called once per frame
+    //Acceleration and Decelartion
+    private float initialVelocity = 0.0f;
+    private float finalVelocity = 2f;
+    [SerializeField]
+    private float currentVelocity = 0.0f;
+    [SerializeField]
+    private float accelerationRate = 0.1f;
+    [SerializeField]
+    private float decelerationRate = 0.1f;
+    Vector3 rot = new Vector3(0,0,1);
+    Vector3 rotR = new Vector3(0, 0, -1);
+
+    [SerializeField]
+    private float maxSpeed;
+    [SerializeField]
+    private float rotateMax;
+
     void Update()
     {
+
+        transform.position += transform.up * 0.5f * Time.deltaTime;
         //Forward
+       // transform.Translate(0, 0.5f * Time.deltaTime, 0, Space.World);
+       
+
         if (Input.GetKey(KeyCode.W))
         {
-            transform.position += transform.up * movementSpeed * Time.deltaTime;
+            currentVelocity = currentVelocity + (accelerationRate * Time.deltaTime);
+
+            transform.position += transform.up * currentVelocity * Time.deltaTime;
+          //  transform.Translate(0, currentVelocity * Time.deltaTime, 0, Space.World);
+
             rocket.SetActive(true);
-   
-          //  script.ScreenWrap();
-          
+
         }
+        else
+        {
+            currentVelocity = currentVelocity - (decelerationRate * Time.deltaTime);
+            // transform.Translate(0, currentVelocity * Time.deltaTime, 0, Space.World);
+            transform.position += transform.up * currentVelocity * Time.deltaTime;
+
+        }
+        currentVelocity = Mathf.Clamp(currentVelocity, initialVelocity, finalVelocity);
         if (Input.GetKeyUp(KeyCode.W))
         {
             rocket.SetActive(false);
-           /*
-                if (timeSpaceDrift > 0)
-                {
-                    transform.position += transform.up * spaceDrifting * Time.deltaTime;
-                    Debug.Log("Funkar" + timeSpaceDrift);
-                    timeSpaceDrift -= Time.deltaTime;
-                }
-           */
-                
+
         }
         //rotate left
         if (Input.GetKey(KeyCode.A))
         {
-            transform.Rotate(Vector3.forward * rotationSpeed *Time.deltaTime);
+            transform.Rotate(0, 0, rotationSpeed * Time.deltaTime, Space.Self);
+            //rocket.transform.rotation = spritePlayer.transform.rotation;
+            //transform.Rotate(0, 0, rotationSpeed * Time.deltaTime, Space.Self);
+            spritePlayer.transform.Rotate(0, 0, rotationSpeed * Time.deltaTime, Space.Self);
+            //  transform.Rotate(rot);
         }
         //rotate right
         if (Input.GetKey(KeyCode.D))
         {
-            transform.Rotate(Vector3.back * rotationSpeed * Time.deltaTime);
-        }       
+            transform.Rotate(0, 0, -rotationSpeed * Time.deltaTime, Space.Self);
+            // transform.Rotate(0, 0, -rotationSpeed * Time.deltaTime, Space.Self);
+            //spritePlayer.transform.Rotate(0, 0, -rotationSpeed * Time.deltaTime, Space.Self);
+            rocket.transform.rotation = spritePlayer.transform.rotation;
+            //transform.Rotate(rotR);
+        }
         //Thrust
-        if(Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.LeftShift))
         {
-            movementSpeed = 6;
+            currentVelocity = 6;
             rocket.SetActive(false);
             thrust.SetActive(true);
         }
+        
         if (Input.GetKeyUp(KeyCode.LeftShift))
         {
-            movementSpeed = 3;
+           currentVelocity = 3;
             thrust.SetActive(false);
         }
-
-        //Laser
-        if (time > 0f)
-        {
-            time -= Time.deltaTime;
-
-        }
-        else if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Instantiate(laser, transform.TransformPoint(Vector3.up * 1), transform.rotation);
-            time = cooldown;
-        }
+        
     }
-    void moveForward()
-    { 
-    
+
+    private void ControllerTest()
+    {
+       
+    }
+
+    void fredriskController()
+    {
+        float thrustMovement = Input.GetAxis("Vertical");
+        float rotateMovement = Input.GetAxis("Horizontal");
+
+        transform.Rotate(0, 0, -rotateMovement * rotateMax * Time.deltaTime);
+
+        transform.Translate(Vector3.up * thrustMovement * maxSpeed * Time.deltaTime);
+
+        transform.Translate(Vector3.up * 0.5f * maxSpeed * Time.deltaTime);
     }
 }
