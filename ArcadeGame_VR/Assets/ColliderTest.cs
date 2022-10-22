@@ -5,15 +5,18 @@ using UnityEngine;
 public class ColliderTest : MonoBehaviour
 {
     //Player and player laser
+    [Header("Player")]
     [SerializeField]
     public GameObject player;
     [SerializeField]
-    [Header("Weapon")]
     private GameObject Laser;
+    [SerializeField]
+    private GameObject youWin;
     private GameObject LaserClone;
     private float cooldown = 1f;
     private float time = 0f;
     private bool playerHit = false;
+    
 
     [SerializeField]
     [Header("AsteroidInstantiate")]
@@ -33,7 +36,7 @@ public class ColliderTest : MonoBehaviour
     //private float radiousAsteroidM; // Radius of AsteroidM;
     float sidea;
     float sideb;
-    
+
     //Spawn Asteroids when Big and Medium has been hit so it will be divided into two
     [SerializeField]
     private GameObject[] asteroidsSpawn;
@@ -43,7 +46,7 @@ public class ColliderTest : MonoBehaviour
     public float spawnRate;
     [SerializeField]
     private int SpawnNR;
-    
+
 
     //Access to the gamemanagerscript to get Life and Score variables
     GameManager gameManagerScript;
@@ -65,9 +68,10 @@ public class ColliderTest : MonoBehaviour
         }
         foreach (GameObject asteroidsnew in asteroids.ToArray())
         {
-          
+
             AsteroidsOBJ = asteroidsnew;
-                       
+           // Debug.Log(asteroids.Count);
+
             if (LaserClone != null)
             {
                 //check if laser collides with asteroids
@@ -78,7 +82,7 @@ public class ColliderTest : MonoBehaviour
                 sidea = sidea * sidea;
                 sideb = sideb * sideb;
                 float distance = (float)Mathf.Sqrt(sidea + sideb);
-
+         
 
                 if (distance < radius + radiusTwo)
                 {
@@ -87,7 +91,7 @@ public class ColliderTest : MonoBehaviour
                     Destroy(AsteroidsOBJ);
 
                     Destroy(LaserClone);
-                   // Debug.Log(AsteroidsOBJ.name);
+                    // Debug.Log(AsteroidsOBJ.name);
                     if (AsteroidsOBJ.name == "AsteroidBig(Clone)")
                     {
 
@@ -95,7 +99,7 @@ public class ColliderTest : MonoBehaviour
                         GameObject asteroid2 = Instantiate(asteroidM, LaserClone.transform.position, LaserClone.transform.rotation);
                         asteroids.Add(asteroid1);
                         asteroids.Add(asteroid2);
-                        gameManagerScript.AddScore(3);
+                        gameManagerScript.AddScore(1);
                     }
 
                     if (AsteroidsOBJ.name == "AsteroidMedium(Clone)" || AsteroidsOBJ.name == "AsteroidMInstantiate(Clone)")
@@ -105,17 +109,19 @@ public class ColliderTest : MonoBehaviour
                         GameObject asteroidS2 = Instantiate(asteroidS, LaserClone.transform.position, LaserClone.transform.rotation);
                         asteroids.Add(asteroidS1);
                         asteroids.Add(asteroidS2);
-                        gameManagerScript.AddScore(2);
+                        gameManagerScript.AddScore(3);
                     }
                     if (AsteroidsOBJ.name == "AsteroidSmal(Clone)" || AsteroidsOBJ.name == "AsteroidSmalInstantiate(Clone)")
                     {
-                        gameManagerScript.AddScore(1);
+                        gameManagerScript.AddScore(5);
                     }
 
-                    if (asteroids.Count == 0)
+                    if (asteroids.Count <= 3)
                     {
-                        return;
+                        youWin.SetActive(true);
+                        //return;
                     }
+                    
 
                 }
             }
@@ -131,7 +137,7 @@ public class ColliderTest : MonoBehaviour
             if (distancePlayer < radiusPlayer + radiusTwo && playerHit == false)
             {
                 playerHit = true;
-      
+
                 gameManagerScript.SubtractLives();
 
                 asteroids.Remove(AsteroidsOBJ);
@@ -152,7 +158,7 @@ public class ColliderTest : MonoBehaviour
                     GameObject asteroidS2 = Instantiate(asteroidS, player.transform.position, player.transform.rotation);
                     asteroids.Add(asteroidS1);
                     asteroids.Add(asteroidS2);
-                
+
                 }
 
                 StartCoroutine(ResetPlayerHitBool());
@@ -162,8 +168,8 @@ public class ColliderTest : MonoBehaviour
                     player.transform.parent.gameObject.SetActive(false);
                     gameMenu.SetActive(true);
                 }
-            }       
-          
+            }
+
         }
 
     }
