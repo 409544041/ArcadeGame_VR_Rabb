@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
     private Text livesText;
     [SerializeField]
     private Text scoreText;
+    [SerializeField]
+    private Text highScoreText;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +25,7 @@ public class GameManager : MonoBehaviour
     {
         scoreText.text = score.ToString();
         livesText.text = lives.ToString();
+        highScoreText.text = score.ToString();
     }
 
     public void AddScore(int points)    
