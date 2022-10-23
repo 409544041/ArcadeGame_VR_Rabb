@@ -4,18 +4,14 @@ using UnityEngine;
 
 public class Asteroids : MonoBehaviour
 {
-   // [SerializeField]
-  //  private float maxThrust = 5f;
+    [SerializeField]
+    public AsteroidSize size;
     [SerializeField]
     private float asteroidThrust;
     [SerializeField]
     private float asteroidThrustSpin;
     [SerializeField]
     private float asteroidSpin;
-   // [SerializeField]
-   // private float maxSpin = 10f;
-   // [SerializeField]
-   // GameObject sprite;
     [SerializeField]
 
     // Start is called before the first frame update
@@ -29,14 +25,13 @@ public class Asteroids : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-
-
-                transform.Rotate(0, 0, asteroidSpin *asteroidThrustSpin * Time.deltaTime, Space.Self); //rotate
-                transform.Translate(asteroidThrust * Time.deltaTime, 0, 0, Space.World);  //move 
-                transform.Translate(0, asteroidThrust * Time.deltaTime, 0, Space.World);
-
-           
+        transform.Rotate(0, 0, asteroidSpin * asteroidThrustSpin * Time.deltaTime, Space.Self); //rotate
+        transform.Translate(asteroidThrust * Time.deltaTime, 0, 0, Space.World);  //move 
+        transform.Translate(0, asteroidThrust * Time.deltaTime, 0, Space.World);
     }
-        
+
+    public enum AsteroidSize
+    {
+        Small, Medium, Big
+    }
 }

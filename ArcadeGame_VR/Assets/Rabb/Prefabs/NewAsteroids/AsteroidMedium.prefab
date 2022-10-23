@@ -110,6 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cd9c9599edec8c48a99c3a6625953ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  size: 1
   asteroidThrust: 0
   asteroidThrustSpin: 0
   asteroidSpin: 0

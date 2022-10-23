@@ -7,16 +7,19 @@ public class ColliderTest : MonoBehaviour
     //Player and player laser
     [Header("Player")]
     [SerializeField]
-    public GameObject player;
-    [SerializeField]
-    private GameObject Laser;
+    private GameObject laser;
     [SerializeField]
     private GameObject youWin;
-    private GameObject LaserClone;
+    [SerializeField]
+    private GameObject instantiatePlayer;
+    [SerializeField]
+    private Transform spawnPoint;
+    private List<GameObject> laserShots = new List<GameObject>();
     private float cooldown = 1f;
     private float time = 0f;
     private bool playerHit = false;
-    
+    public bool playerSpawned = false;
+    public GameObject spawnedPlayer;
 
     [SerializeField]
     [Header("AsteroidInstantiate")]
@@ -24,18 +27,9 @@ public class ColliderTest : MonoBehaviour
     [SerializeField]
     private GameObject asteroidS;
 
-    [SerializeField]
-    //private GameObject[] colliderList;
-
-    //List of all the instantiated objects that also checks the collision
     private List<GameObject> asteroids = new List<GameObject>();
-    GameObject AsteroidsOBJ;
-    private float radius; //radius of the laser
-    private float radiusTwo; //Radius of all the asteroids
-    private float radiusPlayer; //Radius of Player
-    //private float radiousAsteroidM; // Radius of AsteroidM;
-    float sidea;
-    float sideb;
+    GameObject asteroid;
+
 
     //Spawn Asteroids when Big and Medium has been hit so it will be divided into two
     [SerializeField]
@@ -45,23 +39,34 @@ public class ColliderTest : MonoBehaviour
 
     public float spawnRate;
     [SerializeField]
-    private int SpawnNR;
+    private int spawnNR;
 
-
+    [SerializeField]
+    private GameObject collidingEffect;
     //Access to the gamemanagerscript to get Life and Score variables
     GameManager gameManagerScript;
     [SerializeField]
     private GameObject gameMenu;
+
+    [SerializeField]
+    private AudioClip[] gameSounds;
+    private AudioSource playSounds;
     private void Start()
     {
         gameManagerScript = GameObject.Find("GameManager").GetComponent<GameManager>();
-
+        spawnNR = Random.Range(3, spawnNR);
         StartCoroutine(SpawnAsteroids());
-        SpawnNR = Random.Range(3, SpawnNR);
-
+        playSounds = this.GetComponent<AudioSource>();
     }
     private void Update()
     {
+        if (!gameMenu.activeSelf && playerSpawned == false)
+        {
+            spawnedPlayer = Instantiate(instantiatePlayer, spawnPoint.transform.position, spawnPoint.transform.rotation);
+            spawnedPlayer.SetActive(true);
+            playerSpawned = true;
+        }
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Shoot();
@@ -69,114 +74,121 @@ public class ColliderTest : MonoBehaviour
         foreach (GameObject asteroidsnew in asteroids.ToArray())
         {
 
-            AsteroidsOBJ = asteroidsnew;
-           // Debug.Log(asteroids.Count);
+            asteroid = asteroidsnew; // eventuellt behövs inte denna
 
-            if (LaserClone != null)
+            foreach (var laserShot in laserShots)
             {
-                //check if laser collides with asteroids
-                radius = LaserClone.GetComponentInChildren<SpriteRenderer>().bounds.extents.magnitude / 2;
-                radiusTwo = AsteroidsOBJ.GetComponent<SpriteRenderer>().bounds.extents.magnitude / 2;
-                sidea = Mathf.Abs(LaserClone.gameObject.transform.position.x - AsteroidsOBJ.gameObject.transform.position.x);
-                sideb = Mathf.Abs(LaserClone.gameObject.transform.position.y - AsteroidsOBJ.gameObject.transform.position.y);
-                sidea = sidea * sidea;
-                sideb = sideb * sideb;
-                float distance = (float)Mathf.Sqrt(sidea + sideb);
-         
-
-                if (distance < radius + radiusTwo)
+                if (laserShot != null)
                 {
-
-                    asteroids.Remove(AsteroidsOBJ);
-                    Destroy(AsteroidsOBJ);
-
-                    Destroy(LaserClone);
-                    // Debug.Log(AsteroidsOBJ.name);
-                    if (AsteroidsOBJ.name == "AsteroidBig(Clone)")
-                    {
-
-                        GameObject asteroid1 = Instantiate(asteroidM, LaserClone.transform.position, LaserClone.transform.rotation);
-                        GameObject asteroid2 = Instantiate(asteroidM, LaserClone.transform.position, LaserClone.transform.rotation);
-                        asteroids.Add(asteroid1);
-                        asteroids.Add(asteroid2);
-                        gameManagerScript.AddScore(1);
-                    }
-
-                    if (AsteroidsOBJ.name == "AsteroidMedium(Clone)" || AsteroidsOBJ.name == "AsteroidMInstantiate(Clone)")
-                    {
-
-                        GameObject asteroidS1 = Instantiate(asteroidS, LaserClone.transform.position, LaserClone.transform.rotation);
-                        GameObject asteroidS2 = Instantiate(asteroidS, LaserClone.transform.position, LaserClone.transform.rotation);
-                        asteroids.Add(asteroidS1);
-                        asteroids.Add(asteroidS2);
-                        gameManagerScript.AddScore(3);
-                    }
-                    if (AsteroidsOBJ.name == "AsteroidSmal(Clone)" || AsteroidsOBJ.name == "AsteroidSmalInstantiate(Clone)")
-                    {
-                        gameManagerScript.AddScore(5);
-                    }
-
-                    if (asteroids.Count <= 3)
-                    {
-                        youWin.SetActive(true);
-                        //return;
-                    }
                     
+                    //check if laser collides with asteroids
+                    if (IsCollision(laserShot, asteroid))
+                    {
+                        PlaySound(1);
+                        Destroy(asteroid);
+                        asteroids.Remove(asteroid);
+                        Destroy(laserShot);
+                        var asteroidAs = asteroid.GetComponent<Asteroids>();
 
+                        if (asteroidAs.size == Asteroids.AsteroidSize.Big)
+                        {
+                            StartCoroutine(SetCollisionEffectLaser(laserShot));
+                            CreateAsteroids(asteroidM, laserShot.transform);
+                            gameManagerScript.AddScore(1);
+                        }
+
+                        if (asteroidAs.size == Asteroids.AsteroidSize.Medium)
+                        {
+                            StartCoroutine(SetCollisionEffectLaser(laserShot));
+                            CreateAsteroids(asteroidS, laserShot.transform);
+                            gameManagerScript.AddScore(3);
+                        }
+                        if (asteroidAs.size == Asteroids.AsteroidSize.Small)
+                        {
+                            StartCoroutine(SetCollisionEffectLaser(laserShot));
+                            gameManagerScript.AddScore(5);
+                        }
+
+                        if (asteroids.Count == 0)
+                        {
+
+                            youWin.SetActive(true);
+
+                        }
+                    }
                 }
+
+
             }
-
-            //Check If Player taking damage or if player is dead
-            radiusPlayer = player.GetComponent<SpriteRenderer>().bounds.extents.magnitude / 2;
-            float sideaPlayer = Mathf.Abs(player.gameObject.transform.position.x - AsteroidsOBJ.gameObject.transform.position.x);
-            float sidebPlayer = Mathf.Abs(player.gameObject.transform.position.y - AsteroidsOBJ.gameObject.transform.position.y);
-            sideaPlayer = sideaPlayer * sideaPlayer;
-            sidebPlayer = sidebPlayer * sidebPlayer;
-            float distancePlayer = (float)Mathf.Sqrt(sideaPlayer + sidebPlayer);
-
-            if (distancePlayer < radiusPlayer + radiusTwo && playerHit == false)
+            if (spawnedPlayer != null)
             {
-                playerHit = true;
-
-                gameManagerScript.SubtractLives();
-
-                asteroids.Remove(AsteroidsOBJ);
-                Destroy(AsteroidsOBJ);
-
-                if (AsteroidsOBJ.name == "AsteroidBig(Clone)")
+                //Check If Player taking damage or if player is dead              
+                if (playerHit == false && IsCollision(spawnedPlayer, asteroid))
                 {
-                    GameObject asteroid1 = Instantiate(asteroidM, player.transform.position, player.transform.rotation);
-                    GameObject asteroid2 = Instantiate(asteroidM, player.transform.position, player.transform.rotation);
-                    asteroids.Add(asteroid1);
-                    asteroids.Add(asteroid2);
-                }
+                    PlaySound(2);
+                    playerHit = true;
+                    gameManagerScript.SubtractLives();
 
-                if (AsteroidsOBJ.name == "AsteroidMedium(Clone)" || AsteroidsOBJ.name == "AsteroidMInstantiate(Clone)")
-                {
+                    Destroy(asteroid);
+                    asteroids.Remove(asteroid);
+                    var asteroidAs = asteroid.GetComponent<Asteroids>();
 
-                    GameObject asteroidS1 = Instantiate(asteroidS, player.transform.position, player.transform.rotation);
-                    GameObject asteroidS2 = Instantiate(asteroidS, player.transform.position, player.transform.rotation);
-                    asteroids.Add(asteroidS1);
-                    asteroids.Add(asteroidS2);
+                    if (asteroidAs.size == Asteroids.AsteroidSize.Big)
+                    {
+                        StartCoroutine(SetCollisionEffect());
+                        CreateAsteroids(asteroidM, spawnedPlayer.transform);
+                    }
 
-                }
+                    if (asteroidAs.size == Asteroids.AsteroidSize.Medium)
+                    {
+                        StartCoroutine(SetCollisionEffect());
+                        CreateAsteroids(asteroidS, spawnedPlayer.transform);
 
-                StartCoroutine(ResetPlayerHitBool());
-                if (gameManagerScript.lives == 0)
-                {
+                    }
 
-                    player.transform.parent.gameObject.SetActive(false);
-                    gameMenu.SetActive(true);
+                    if (asteroidAs.size == Asteroids.AsteroidSize.Small)
+                    {
+                        StartCoroutine(SetCollisionEffect());
+                    }
+
+                    StartCoroutine(ResetPlayerHitBool());
+                    if (gameManagerScript.lives == 0)
+                    {
+
+                        Destroy(spawnedPlayer);
+                        playerSpawned = false;
+                        gameMenu.SetActive(true);
+
+                    }
                 }
             }
-
         }
 
     }
 
+    private bool IsCollision(GameObject object1, GameObject object2)
+    {
+        var object1Radius = object1.GetComponentInChildren<SpriteRenderer>().bounds.extents.magnitude / 2;
+        var object2Radius = object2.GetComponentInChildren<SpriteRenderer>().bounds.extents.magnitude / 2;
+        var distanceXPlayer = Mathf.Abs(object1.gameObject.transform.position.x - object2.gameObject.transform.position.x);
+        var distanceYPlayer = Mathf.Abs(object1.gameObject.transform.position.y - object2.gameObject.transform.position.y);
+        var distanceXSquaredPlayer = distanceXPlayer * distanceXPlayer;
+        var distanceYSquaredPlayer = distanceYPlayer * distanceYPlayer;
+        var distancePlayer = (float)Mathf.Sqrt(distanceXSquaredPlayer + distanceYSquaredPlayer);
+        return distancePlayer < object1Radius + object2Radius;
+    }
+
+    private void CreateAsteroids(GameObject asteroid, Transform transform)
+    {
+        GameObject asteroid1 = Instantiate(asteroid, transform.position, transform.rotation);
+        GameObject asteroid2 = Instantiate(asteroid, transform.position, transform.rotation);
+        asteroids.Add(asteroid1);
+        asteroids.Add(asteroid2);
+    }
+
     IEnumerator ResetPlayerHitBool()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.3f);
         playerHit = false;
     }
     //ShootLaser
@@ -189,22 +201,48 @@ public class ColliderTest : MonoBehaviour
 
         }
 
-        LaserClone = Instantiate(Laser, player.transform.TransformPoint(Vector3.up * 1), player.transform.rotation);
-        LaserClone.SetActive(true);
+        var laserShot = Instantiate(laser, spawnedPlayer.GetComponentInChildren<SpriteRenderer>().transform.TransformPoint(Vector3.up * 1), spawnedPlayer.GetComponentInChildren<SpriteRenderer>().transform.rotation);
+        laserShot.SetActive(true);
+        laserShots.Add(laserShot);
+        PlaySound(0);
         time = cooldown;
     }
+
+    private void PlaySound(int soundToPlay)
+    {
+        playSounds.clip = gameSounds[soundToPlay];
+        playSounds.Play();
+    }
+
     //SpawnAsteroids with a sligth pause
     private IEnumerator SpawnAsteroids()
     {
-        for (int i = 0; i < SpawnNR; i++)
+        for (int i = 0; i < spawnNR; i++)
         {
-
             Vector2 position = spawnPositions[Random.Range(0, spawnPositions.Length)].transform.position;
-            GameObject asteroidClone = Instantiate(asteroids[Random.Range(0, asteroidsSpawn.Length)], new Vector2(position.x, position.y), transform.rotation);
+            GameObject asteroidClone = Instantiate(asteroidsSpawn[Random.Range(0, asteroidsSpawn.Length)], new Vector2(position.x, position.y), transform.rotation);
             asteroidClone.SetActive(true);
             asteroids.Add(asteroidClone);
             yield return new WaitForSeconds(3);
         }
 
+    }
+    IEnumerator SetCollisionEffect()
+    {
+        collidingEffect.transform.position = spawnedPlayer.transform.position;
+        collidingEffect.transform.rotation = spawnedPlayer.transform.rotation;
+        collidingEffect.SetActive(true);
+        yield return new WaitForSeconds(0.4f);
+        collidingEffect.SetActive(false);
+    }
+
+    IEnumerator SetCollisionEffectLaser(GameObject laser)
+    {
+        //ta ett argument gameobject
+        collidingEffect.transform.position = laser.transform.position;
+        collidingEffect.transform.rotation = laser.transform.rotation;
+        collidingEffect.SetActive(true);
+        yield return new WaitForSeconds(0.1f);
+        collidingEffect.SetActive(false);
     }
 }

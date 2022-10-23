@@ -18,7 +18,7 @@ public class LaserShot : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Space))
         {
-            Debug.Log("Shoot");
+          //  Debug.Log("Shoot");
            GameObject clone = Instantiate(Original, transform.TransformPoint(Vector3.up * 1), transform.rotation);
             time = cooldown;
             for (int i = 0; i < 10; i++)
