@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 public class GameManager : MonoBehaviour
@@ -17,9 +14,9 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-     
+
         lives = 3;
-       // score = 0;
+        //score = 0;
         UpdateScoreAndLives();
         UpdateHighScore();
     }
@@ -28,12 +25,12 @@ public class GameManager : MonoBehaviour
     {
         scoreText.text = score.ToString();
         livesText.text = lives.ToString();
-  
+
 
 
     }
 
-    public void AddScore(int points)    
+    public void AddScore(int points)
     {
         score += points;
         UpdateScoreAndLives();
@@ -57,12 +54,14 @@ public class GameManager : MonoBehaviour
 
     void UpdateHighScore()
     {
-        highScoreText.text = PlayerPrefs.GetInt("HighScore",0).ToString();
+        highScoreText.text = PlayerPrefs.GetInt("HighScore", 0).ToString();
     }
- 
-    public void UpdateLives()
+
+    public void UpdateLivesAndScore()
     {
         lives = 3;
+        score = 0;
         UpdateScoreAndLives();
     }
+
 }

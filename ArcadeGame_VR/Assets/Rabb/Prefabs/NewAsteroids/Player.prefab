@@ -249,16 +249,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 300
-  movementSpeed: 2
-  laser: {fileID: 3728242680297197122, guid: c85281915ce4b0445b02403f9d2f8899, type: 3}
   rocket: {fileID: 3723935376764372519}
   thrust: {fileID: 3723935377620000012}
-  spritePlayer: {fileID: 3723935377927093881}
-  currentVelocity: 0
+  spritePlayer: {fileID: 3723935377927093883}
+  currentSpeed: 0.5
   accelerationRate: 1
   decelerationRate: 0.3
-  maxSpeed: 2
-  rotateMax: 300
   playerSoundsFX:
   - {fileID: 8300000, guid: fe82966a894db464da704dbd1576d3fc, type: 3}
 --- !u!114 &3723935377351423072
