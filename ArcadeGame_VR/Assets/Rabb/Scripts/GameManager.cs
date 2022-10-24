@@ -60,8 +60,9 @@ public class GameManager : MonoBehaviour
         highScoreText.text = PlayerPrefs.GetInt("HighScore",0).ToString();
     }
  
-    void Update()
+    public void UpdateLives()
     {
-        
+        lives = 3;
+        UpdateScoreAndLives();
     }
 }

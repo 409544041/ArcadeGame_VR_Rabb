@@ -366,6 +366,13 @@ MonoBehaviour:
   rotationSpeed: 200
   movementSpeed: 3
   laser: {fileID: 2135305060721533086, guid: 0a42245944172c340bc98df931e9a5fe, type: 3}
-  cooldown: 0.1
   rocket: {fileID: 378178776803700208}
   thrust: {fileID: 378178778128987867}
+  spritePlayer: {fileID: 0}
+  currentVelocity: 0
+  accelerationRate: 0.1
+  decelerationRate: 0.1
+  maxSpeed: 0
+  rotateMax: 0
+  playerSoundsFX:
+  - {fileID: 8300000, guid: 69fe74673b9256f49bd8972698ae2da4, type: 3}
