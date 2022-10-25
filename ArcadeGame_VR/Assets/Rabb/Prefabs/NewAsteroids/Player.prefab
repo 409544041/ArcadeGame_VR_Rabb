@@ -248,7 +248,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d62f95b133a913743b683ff0a67f268f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 300
+  rotationSpeed: 200
   rocket: {fileID: 3723935376764372519}
   thrust: {fileID: 3723935377620000012}
   spritePlayer: {fileID: 3723935377927093883}

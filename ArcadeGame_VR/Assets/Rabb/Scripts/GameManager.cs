@@ -4,7 +4,6 @@ public class GameManager : MonoBehaviour
 {
     public int lives;
     public int score;
-    private int highscore;
     [SerializeField]
     private Text livesText;
     [SerializeField]
@@ -62,6 +61,11 @@ public class GameManager : MonoBehaviour
         lives = 3;
         score = 0;
         UpdateScoreAndLives();
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 
 }

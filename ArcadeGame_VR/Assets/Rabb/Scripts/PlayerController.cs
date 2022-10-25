@@ -11,9 +11,13 @@ public class PlayerController : MonoBehaviour
     private bool isThrusting = false;
     [SerializeField]
     private GameObject spritePlayer;
+    private readonly static float thrustMaxSpeed = 4f;
+    private readonly static float normalSpeed = 2f;
+
+
     //Acceleration and Decelartion
     private float initialSpeed = 0.5f;
-    private float finalSpeed = 2f;
+    private float finalSpeed = normalSpeed;
     [SerializeField]
     private float currentSpeed = 0.5f;
     [SerializeField]
@@ -25,7 +29,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private AudioClip[] playerSoundsFX;
     private AudioSource myAudiosource;
-   
+
 
     private void Start()
     {
@@ -34,9 +38,9 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         //Move Forward
-        if (currentSpeed < 2.1 && Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.LeftShift))
+        if (currentSpeed < normalSpeed + 0.1 && Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.LeftShift))
         {
-            finalSpeed = 2;
+            finalSpeed = normalSpeed;
             Accelerate();
             rocket.SetActive(true);
             PlaySoundFX();
@@ -50,18 +54,17 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.W))
         {
             rocket.SetActive(false);
-          
+
         }
 
-        //Rotation
+        //Rotation      
         Vector3 rotationZ = new Vector3(0f, 0f, Input.GetAxis("Horizontal") * -1f);
         transform.Rotate(rotationZ * Time.deltaTime * rotationSpeed);
-       // spritePlayer.transform.Rotate(rotationZ * Time.deltaTime * rotationSpeed, Space.Self);
 
         //Thrust
         if (Input.GetKeyDown(KeyCode.LeftShift) && isThrusting == false)
         {
-            finalSpeed = 4;
+            finalSpeed = thrustMaxSpeed;
             isThrusting = true;
             Thrust();
         }
@@ -73,18 +76,20 @@ public class PlayerController : MonoBehaviour
 
     }
 
+    private void MoveShip()
+    {
+        currentSpeed = Mathf.Clamp(currentSpeed, initialSpeed, finalSpeed);
+        transform.Translate(transform.up * currentSpeed * Time.deltaTime, Space.World);
+    }
 
-
-    void Accelerate()
+    private void Accelerate()
     {
 
         currentSpeed = currentSpeed + (accelerationRate * Time.deltaTime);
-        currentSpeed = Mathf.Clamp(currentSpeed, initialSpeed, finalSpeed);
-        transform.Translate(transform.up * currentSpeed * Time.deltaTime, Space.World);
-
+        MoveShip();
     }
 
-    void Thrust()
+    private void Thrust()
     {
         do
         {
@@ -93,26 +98,25 @@ public class PlayerController : MonoBehaviour
             thrust.SetActive(true);
             currentSpeed = currentSpeed + (10.0f * Time.deltaTime);
         }
-        while (currentSpeed < 4);
+        while (currentSpeed < thrustMaxSpeed);
     }
 
-    void Deaccelerate()
+    private void Deaccelerate()
     {
-        if (currentSpeed > 2)
+        if (currentSpeed > normalSpeed)
         {
             currentSpeed = currentSpeed - (0.2f * Time.deltaTime);
 
         }
-        if (currentSpeed < 2)
+        if (currentSpeed < normalSpeed)
         {
             isThrusting = false;
         }
         currentSpeed = currentSpeed - (decelerationRate * Time.deltaTime);
-        currentSpeed = Mathf.Clamp(currentSpeed, initialSpeed, finalSpeed);
-        transform.position += transform.up * currentSpeed * Time.deltaTime;
+        MoveShip();
     }
 
-    void PlaySoundFX()
+    private void PlaySoundFX()
     {
         myAudiosource.clip = playerSoundsFX[0];
         if (!myAudiosource.isPlaying)

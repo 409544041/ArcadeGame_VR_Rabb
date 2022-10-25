@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ColliderTest : MonoBehaviour
+public class ColliderController : MonoBehaviour
 {
     //Player and player laser
     [Header("Player")]
@@ -238,7 +238,7 @@ public class ColliderTest : MonoBehaviour
 
     IEnumerator SetCollisionEffectLaser(GameObject laser)
     {
-        //ta ett argument gameobject
+        //tar ett argument gameobject
         collidingEffect.transform.position = laser.transform.position;
         collidingEffect.transform.rotation = laser.transform.rotation;
         collidingEffect.SetActive(true);

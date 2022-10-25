@@ -27,7 +27,7 @@ public class Asteroids : MonoBehaviour
         transform.Translate(asteroidThrust * Time.deltaTime, 0, 0, Space.World);  //move 
         transform.Translate(0, asteroidThrust * Time.deltaTime, 0, Space.World);
     }
-
+    // Named constants to simplify identifying/type of asteroids
     public enum AsteroidSize
     {
         Small, Medium, Big
